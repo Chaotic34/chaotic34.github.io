@@ -37,6 +37,20 @@ h1 {
     border: 2px solid #333; 
 }
 
+.wide {
+    flex: 2; /* Make the middle container wider */
+}
+
+/* Add specific styling for the wide container */
+.wide .box {
+    border: 2px solid #333;
+}
+
+/* Remove border from the boxes inside containers without the 'wide' class */
+.container:not(.wide) .box {
+    border: none;
+}
+
 a {
     color: #f2fbeb;
     text-decoration: none;
