@@ -56,7 +56,26 @@ a {
     text-decoration: none;
 }
 
+p {
+    color: #f2fbeb;
+    text-decoration: none;
+}
+
+h3 {
+    color: #f2fbeb;
+}
 /* Link style on hover */
 a:hover {
     color: #f2fbeb86;
 }
+
+.container img {
+    height: 100%;
+    width: 100%;
+  }
+
+.container img {
+    object-fit: contain;
+  /* or
+    object-fit: cover; */
+  } 
