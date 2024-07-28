@@ -119,6 +119,20 @@ a {
   text-decoration: none;
 }
 
+/* styles.css aka the image toggle part*/ 
+.hidden {
+  display: none;
+}
+
+#imageContainer {
+  display: none;
+}
+
+#toggleCheckbox:checked + #imageContainer {
+  display: block;
+}
+
+
 
   
   
