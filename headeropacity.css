@@ -25,7 +25,7 @@ body {
   border-bottom: 3px solid black;
   margin: 0 auto;
   overflow: hidden;
-  background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url('images/background.png'); /*Header image -- replace with your own!*/
+  background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url('images/background3.png'); /*Header image -- replace with your own!*/
   background-size:cover;
   }
   
@@ -124,14 +124,23 @@ a {
   display: none;
 }
 
-#imageContainer {
+#imageContainerEldenRing,
+#imageContainerCS2,
+#imageContainerGames {
   display: none;
 }
 
-#toggleCheckbox:checked + #imageContainer {
+#toggleCheckboxEldenRing:checked + #imageContainerEldenRing,
+#toggleCheckboxCS2:checked + #imageContainerCS2,
+#toggleCheckboxGames:checked + #imageContainerGames {
   display: block;
 }
 
+/* Hover effect for labels */
+label:hover {
+  color: #f2fbeb86; 
+  cursor: pointer;
+}
 
 
   
