@@ -1,117 +1,129 @@
 body {
-  background: #0d0d13;
-  font-family:"Candara", "Open Sans", sans-serif;
-  font-size:16px;
+  background-color: #1E201E;
+  opacity: 1;
+  background: radial-gradient(circle, transparent 20%, #1E201E 20%, #1E201E 80%, transparent 80%, transparent), 
+              radial-gradient(circle, transparent 20%, #1E201E 20%, #1E201E 80%, transparent 80%, transparent) 25px 25px, 
+              linear-gradient(#ECDFCC 2px, transparent 2px) 0 -1px, 
+              linear-gradient(90deg, #ECDFCC 2px, #1E201E 2px) -1px 0;
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+  font-family: "Candara", "Open Sans", sans-serif;
+  font-size: 16px;
   color: white;
-  }
-  
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 .tiny {
   font-size: 9px;
   margin: 0 auto;
   text-align: center;
-  }
-  
-/*Everything in the main box goes in this*/
+}
+
 .wrapper {
   width: 750px;
+  max-width: 100%;
   border: 3px solid black;
   margin: 0 auto;
   top: 0px;
-  }
-  
+  overflow: hidden;
+}
+
 .header {
   background: black;
   height: 300px;
   border-bottom: 3px solid black;
   margin: 0 auto;
   overflow: hidden;
-  background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url('images/backgrounds/background1.webp'); /*Header image -- replace with your own!*/
-  background-size:cover;
-  }
-  
-/*This and the header-title class are deprecated now that this style uses a background image for the header div.*/
-/*.header img {
-  display: block;
-  opacity: 0.35;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  }
-*/
+  background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url('images/backgrounds/background1.webp');
+  background-size: cover;
+}
 
- /*If you want to use a smaller title or normal text, add .header p or .header h4 or whatever to the list*/
 .header h2, .header h3, .header h1 {
   font-weight: bold;
   color: white;
   text-align: center;
   border: 0px solid green;
-  margin: 18% auto; /*approx centered*/
+  margin: 18% auto;
   opacity: 0.999999;
 }
 
+/* === NAVIGATION BUTTON STYLING === */
 .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
   background: black;
-  padding: 10px;
-  border-bottom: 3px solid black;
-  }
-  
+  padding: 4px;
+  border-bottom: 4px solid black;
+}
+
+.links div {
+  border-right: 1px solid #888;
+  padding-right: 10px;
+  margin-right: 5px;
+}
+
+.links div:last-child {
+  border-right: none;
+}
+
 .links a {
+  display: inline-block;
+  background-color: #333;
   color: white;
-  padding: 3px;
-  margin-left: 5px;
-  margin-right:5px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 17px;
   text-decoration: none;
-  font-size:17px;
-  }
+  transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+  background-color: #555;
+  color: #f2fbeb86;
+}
+/* === END NAVIGATION STYLING === */
 
 .main {
-  padding: 15px;
+  padding: 30px;
   margin: 0 auto;
   background: #222222;
-  }
-  
-/*Prevent overflow of large images in main text areas.*/
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .main img {
   max-width: 100%;
   height: auto;
-  }
-  
+}
+
 .footer {
   background: black;
-  padding: 20px;
-  padding-top:5px;
-  padding-bottom:5px;
+  padding: 20px 5px;
   border-top: 3px solid black;
-  font-size:14px;
-  }
-  
-  
-/*For narrow screens*/
+  font-size: 14px;
+}
+
 @media(max-width: 790px) {
   .wrapper {
     width: 95%;
-    }
-  .header h1, .header h2, .header h3 { /*Vertical centering gets wonky when the box is variable width*/
+  }
+  .header h1, .header h2, .header h3 {
     margin: 20% 5% auto;
-    }
-  }  
+  }
+}
 
-/*Mobile compatibility*/
 @media(orientation: portrait) {
   .wrapper {
-    width: 95%;}
+    width: 95%;
+  }
   .header {
-    height:230px;
-    }
+    height: 230px;
+  }
   .header h1, .header h2, .header h3 {
     margin: 20% 3% auto;
-    }
   }
-
-  /*//////////////////////////////*/
-  
-  a:hover {
-    color: #f2fbeb86;
 }
 
 a {
@@ -119,29 +131,20 @@ a {
   text-decoration: none;
 }
 
-/* styles.css aka the image toggle part*/ 
-.hidden {
-  display: none;
+a:hover {
+  color: #f2fbeb86;
 }
 
-#imageContainerEldenRing,
-#imageContainerCS2,
-#imageContainerGames {
-  display: none;
-}
-
-#toggleCheckboxEldenRing:checked + #imageContainerEldenRing,
-#toggleCheckboxCS2:checked + #imageContainerCS2,
-#toggleCheckboxGames:checked + #imageContainerGames {
-  display: block;
-}
-
-/* Hover effect for labels */
 label:hover {
   color: #f2fbeb86; 
   cursor: pointer;
 }
 
+video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
 
-  
-  
